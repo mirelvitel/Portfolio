@@ -1,0 +1,180 @@
+<ngx-particles
+  [id]="particlesId"
+  [options]="particlesOptions"
+  [particlesInit]="particlesInit"
+></ngx-particles>
+
+<!-- ── NAV ─────────────────────────────────────────────────── -->
+<nav class="nav">
+  <span class="nav-logo">MV</span>
+  <ul class="nav-links">
+    <li><a (click)="scrollTo('about')">About</a></li>
+    <li><a (click)="scrollTo('projects')">Projects</a></li>
+    <li><a (click)="scrollTo('contact')">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── ABOUT ─────────────────────────────────────────────────── -->
+<section id="about" class="section about-section">
+  <div class="about-content">
+    <p class="about-greeting">Hi, I'm</p>
+    <h1 class="about-name">Mirel Vitel</h1>
+    <h2 class="about-role">Software Engineer</h2>
+    <p class="about-bio">
+      CS grad from Vienna. I build web apps — backends, frontends, whatever needs doing. Satisfaction is when I push to prod and nothing breaks. Yet.
+    </p>
+    <div class="about-stack">
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Angular</span>
+      <span class="tag">React</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Git</span>
+    </div>
+    <div class="about-cta">
+      <button class="btn btn-primary" (click)="scrollTo('projects')">View Projects</button>
+      <button class="btn btn-outline" (click)="scrollTo('contact')">Contact Me</button>
+    </div>
+  </div>
+  <div class="scroll-hint" (click)="scrollTo('projects')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ── PROJECTS ───────────────────────────────────────────────── -->
+<section id="projects" class="section projects-section">
+  <div class="section-inner">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">A few things I've built</p>
+
+    <div class="projects-grid">
+
+      <!-- Document Management System -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">&#128196;</span>
+          <div class="project-links">
+            <a href="https://github.com/mirelvitel/DocumentManagementSystem" target="_blank" class="icon-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://document-management-system-iota.vercel.app/" target="_blank" class="icon-link" title="Live demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">Document Management System</h3>
+        <p class="project-desc">A full-featured DMS with OCR scanning, full-text search, and async document processing. Upload a file and it gets parsed, indexed, and made searchable — all handled in the background.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">React</span>
+          <span class="tag">ElasticSearch</span>
+          <span class="tag">Tesseract</span>
+          <span class="tag">RabbitMQ</span>
+          <span class="tag">MinIO</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+
+      <!-- AIdependencyLab -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">&#129514;</span>
+          <div class="project-links">
+            <a href="https://github.com/mirelvitel/AIdependecyLab" target="_blank" class="icon-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="icon-link" title="Live demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">AIdependencyLab</h3>
+        <p class="project-desc">My bachelor thesis project. A platform for running controlled user studies on AI dependency in coding — participants wrote code with and without AI assistance, and the results were tracked and analyzed.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">React</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Docker</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">JDoodle</span>
+          <span class="tag">Judge0</span>
+        </div>
+      </div>
+
+      <!-- MemorIA -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-header-left">
+            <span class="project-icon">&#128218;</span>
+            <span class="badge-wip">In Progress</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mirelvitel/MemorIA" target="_blank" class="icon-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="icon-link" title="Live demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3 class="project-title">MemorIA</h3>
+        <p class="project-desc">An AI companion for book readers. Ask it anything about what you're reading and it answers with full context — and remembers the conversation as you progress through the book.</p>
+        <div class="project-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Angular</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────────── -->
+<section id="contact" class="section contact-section">
+  <div class="section-inner">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-subtitle">Let's work together</p>
+
+    <p class="contact-intro">
+      I'm looking for a full-time position. If you think I'd be a good fit, feel free to reach out.
+    </p>
+
+    <a href="mailto:mirel&#64;vitel.at" class="contact-email">
+      mirel&#64;vitel.at
+    </a>
+
+    <div class="social-links">
+      <a href="https://github.com/mirelvitel" target="_blank" class="social-link" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.2 22 16.447 22 12.021 22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/mirel-vitel-6bb713231/" target="_blank" class="social-link" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://x.com/VitelMirel" target="_blank" class="social-link" title="Twitter / X">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Twitter
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61571112003632" target="_blank" class="social-link" title="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer class="footer">
+  <span>Mirel Vitel</span>
+  <span class="footer-sep">·</span>
+  <span>2026</span>
+</footer>
