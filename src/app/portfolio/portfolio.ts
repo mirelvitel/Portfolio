@@ -4,12 +4,12 @@ import type { Engine } from '@tsparticles/engine';
 import { loadFireflyPreset } from '@tsparticles/preset-firefly';
 
 @Component({
-  selector: 'app-portofolio',
+  selector: 'app-portfolio',
   imports: [NgxParticlesModule],
-  templateUrl: './portofolio.html',
-  styleUrl: './portofolio.css',
+  templateUrl: './portfolio.html',
+  styleUrl: './portfolio.css',
 })
-export class Portofolio {
+export class Portfolio {
   particlesId = 'tsparticles';
 
   particlesOptions = {
